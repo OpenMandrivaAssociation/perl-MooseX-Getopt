@@ -1,25 +1,25 @@
+%define upstream_name    MooseX-Getopt
+%define upstream_version 0.19
 
-%define realname   MooseX-Getopt
-%define version    0.19
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Optional meta attribute trait for ignoring params
-Source:     http://www.cpan.org/modules/by-module/MooseX/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Getopt::Long)
 BuildRequires: perl(Getopt::Long::Descriptive)
+BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 BuildArch: noarch
 
 %description
@@ -37,7 +37,7 @@ the attribute metaclass the MooseX::Getopt::Meta::Attribute manpage to get
 non-default commandline option names and aliases.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor

@@ -3,11 +3,11 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
+Summary:    Optional meta attribute trait for ignoring params
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Summary:    Optional meta attribute trait for ignoring params
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
@@ -19,8 +19,11 @@ BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
+Requires: perl(Getopt::Long::Descriptive)
 
 %description
 This is a role which provides an alternate constructor for creating objects
@@ -58,5 +61,3 @@ rm -rf %buildroot
 %doc ChangeLog README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-

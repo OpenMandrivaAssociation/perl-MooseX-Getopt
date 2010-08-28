@@ -11,7 +11,6 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Getopt::Long)
 BuildRequires: perl(Getopt::Long::Descriptive)
@@ -19,6 +18,8 @@ BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(Test::Requires)
+BuildRequires: perl(Test::Warn)
 
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}

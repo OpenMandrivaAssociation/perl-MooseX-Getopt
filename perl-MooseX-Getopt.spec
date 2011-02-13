@@ -17,10 +17,10 @@ BuildRequires: perl(Getopt::Long::Descriptive)
 BuildRequires: perl(IO::Scalar)
 BuildRequires: perl(Moose)
 BuildRequires: perl(Test::Exception)
+BuildRequires: perl(Test::Fatal)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::Requires)
 BuildRequires: perl(Test::Warn)
-
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 

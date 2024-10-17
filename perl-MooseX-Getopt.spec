@@ -8,7 +8,7 @@ Release:	3
 Summary:	Optional meta attribute trait for ignoring params
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(ExtUtils::MakeMaker)

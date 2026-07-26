@@ -1,15 +1,13 @@
 %define upstream_name    MooseX-Getopt
-%define upstream_version 0.78
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.78
+Release:	2
 
 Summary:	Optional meta attribute trait for ignoring params
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/moose/MooseX-Getopt
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Getopt-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Getopt-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl(ExtUtils::MakeMaker)
@@ -44,7 +42,7 @@ the attribute metaclass the MooseX::Getopt::Meta::Attribute manpage to get
 non-default commandline option names and aliases.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -118,8 +116,7 @@ make test
 * Thu Jul 09 2009 Jérôme Quelin <jquelin@mandriva.org> 0.190.0-1mdv2010.0
 + Revision: 393832
 - adding missing buildrequires:
-- using %%perl_convert_version
-- fixed license field
+- using %0.78 fixed license field
 
   + Guillaume Rousse <guillomovitch@mandriva.org>
     - update to new version 0.19
